@@ -7,13 +7,13 @@ import pickle
 import logging
 
 # Load your trained translation model
-model = tf.keras.models.load_model('/model/english_to_santali_translation_model.h5')
+model = tf.keras.models.load_model('model/english_to_santali_translation_model.h5')
 
 # Load tokenizers
-with open('/tokenizers/english_tokenizer.pkl', 'rb') as f:
+with open('tokenizers/english_tokenizer.pkl', 'rb') as f:
     tokenizer_eng = pickle.load(f)
 
-with open('/tokenizers/santali_tokenizer.pkl', 'rb') as f:
+with open('tokenizers/santali_tokenizer.pkl', 'rb') as f:
     tokenizer_santali = pickle.load(f)
 
 # Function to preprocess input text
